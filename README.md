@@ -56,7 +56,7 @@ mix.spritesmith(null, {
 By default, you can use your sprite images with the class `sprite-{itemname}`. Change them with `cssOpt`.
 
 ```javascript
-mix.spritesmit(null, {
+mix.spritesmith(null, {
   cssClass: function(item) { 
     return '.MY-SPRITE-' + item.name;
   }
