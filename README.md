@@ -41,7 +41,7 @@ mix.spritesmith('src', {options});
 ##### Change Source
 
 ```javascript
-mix.spritesmith('resources/assets/images`');
+mix.spritesmith('resources/assets/images');
 ```
 
 ##### Change Output
