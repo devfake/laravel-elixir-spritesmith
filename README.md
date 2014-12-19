@@ -1,5 +1,4 @@
 # Laravel Elixir Spritesmith
-============================
 
 This is a simple [Spritesmith](https://github.com/twolfson/gulp.spritesmith) wrapper for [Laravel Elixir](https://github.com/laravel/elixir).
 
