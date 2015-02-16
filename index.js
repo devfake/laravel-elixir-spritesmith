@@ -30,7 +30,7 @@ elixir.extend('spritesmith', function(src, options) {
   };
 
   gulp.task('sprite', function() {
-    var sprite = gulp.src(config.src + '/*.png')
+    var sprite = gulp.src(config.src + '/**/*.png')
       .pipe(spritesmith(config))
       .on('error', onError);
 
