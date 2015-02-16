@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     elixir = require('laravel-elixir'),
-    Notification = require('laravel-elixir/ingredients/helpers/Notification'),
+    Notification = require('laravel-elixir/ingredients/commands/Notification'),
     spritesmith = require('gulp.spritesmith'),
     _ = require('underscore');
 

@@ -26,7 +26,7 @@ elixir(function(mix) {
 
 ## How To
 
-If you run `mix.spritesmith()` without parameters, it looks for all PNG-Files in `resources/assets/img/sprites`.
+If you run `mix.spritesmith()` without parameters, it looks for all PNG-Files in `resources/assets/img/sprites` (folders included).
 
 The output of the `sprite.css` file is in `resources/assets/css`. The output of your `sprite.png` is in `public/assets/img`. 
 
