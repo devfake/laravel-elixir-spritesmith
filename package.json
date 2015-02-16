@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-spritesmith",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "description": "Laravel Elixir Spritesmith Extension",
   "main": "index.js",
   "scripts": {
