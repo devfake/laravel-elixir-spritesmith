@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-spritesmith",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Laravel Elixir Spritesmith Extension",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,7 @@
     "url": "https://github.com/devfake/laravel-elixir-spritesmith/issues"
   },
   "dependencies": {
-    "gulp.spritesmith": "2.0.*",
+    "gulp.spritesmith": "3.8.2",
     "gulp-notify": "^2.0.0",
     "underscore": "^1.7.0"
   }
