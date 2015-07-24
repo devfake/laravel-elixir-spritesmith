@@ -11,7 +11,7 @@ elixir.extend('spritesmith', function(src, options) {
   var elixirConfig = this;
 
   var config = {
-    src: src || elixirConfig.assetsDir + '/img/sprites',
+    src: src || elixirConfig.assetsDir + 'img/sprites',
     imgOutput: options.imgOutput || 'public/assets/img',
     cssOutput: options.cssOutput || elixirConfig.cssOutput,
 
@@ -19,8 +19,8 @@ elixir.extend('spritesmith', function(src, options) {
     imgName: options.imgName || 'sprite.png',
     cssName: options.cssName || 'sprite.css',
     imgPath: options.imgPath || '../img/sprite.png',
-    cssOpts: options.cssOpts || { cssClass: function(item) { return '.sprite-' + item.name; }},
 
+    cssVarMap: options.cssVarMap,
     retinaSrcFilter: options.retinaSrcFilter,
     retinaImgName: options.retinaImgName,
     retinaImgPath: options.retinaImgPath
