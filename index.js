@@ -15,11 +15,15 @@ elixir.extend('spritesmith', function(src, options) {
     imgOutput: options.imgOutput || 'public/assets/img',
     cssOutput: options.cssOutput || elixirConfig.cssOutput,
 
-    cssFormat: options.cssFormat || 'css',
+    cssFormat: options.cssFormat,
     imgName: options.imgName || 'sprite.png',
     cssName: options.cssName || 'sprite.css',
     imgPath: options.imgPath || '../img/sprite.png',
-    cssOpts: options.cssOpts || { cssClass: function(item) { return '.sprite-' + item.name; }}
+    cssOpts: options.cssOpts || { cssClass: function(item) { return '.sprite-' + item.name; }},
+
+    retinaSrcFilter: options.retinaSrcFilter,
+    retinaImgName: options.retinaImgName,
+    retinaImgPath: options.retinaImgPath
   };
 
   config = _.extend(config, spritesmithOptions);
