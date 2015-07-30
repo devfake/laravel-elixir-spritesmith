@@ -1,8 +1,9 @@
-var gulp = require('gulp'),
-    elixir = require('laravel-elixir'),
-    Notification = require('laravel-elixir/ingredients/commands/Notification'),
-    spritesmith = require('gulp.spritesmith'),
-    _ = require('underscore');
+var gulp = require('gulp');
+var elixir = require('laravel-elixir');
+var spritesmith = require('gulp.spritesmith');
+var _ = require('underscore');
+
+var Task = elixir.Task;
 
 elixir.extend('spritesmith', function(src, options) {
 
@@ -11,9 +12,9 @@ elixir.extend('spritesmith', function(src, options) {
   var elixirConfig = this;
 
   var config = {
-    src: src || elixirConfig.assetsDir + 'img/sprites',
+    src: src || elixirConfig.assetsPath + 'img/sprites',
     imgOutput: options.imgOutput || 'public/assets/img',
-    cssOutput: options.cssOutput || elixirConfig.cssOutput,
+    cssOutput: options.cssOutput || elixirConfig.css.outputFolder,
 
     cssFormat: options.cssFormat,
     imgName: options.imgName || 'sprite.png',
@@ -28,24 +29,15 @@ elixir.extend('spritesmith', function(src, options) {
 
   config = _.extend(config, spritesmithOptions);
 
-  var onError = function(e) {
-    new Notification().error(e, 'Failed!');
-    this.emit('end');
-  };
-
-  gulp.task('sprite', function() {
+  new Task('sprite', function() {
     var sprite = gulp.src(config.src + '/**/*.png')
-      .pipe(spritesmith(config))
-      .on('error', onError);
+      .pipe(spritesmith(config));
 
     sprite.img.pipe(gulp.dest(config.imgOutput));
     sprite.css.pipe(gulp.dest(config.cssOutput));
 
-    sprite.pipe(new Notification().message('Spritesmith Complete!'));
-
     return sprite;
-  });
+  })
+  .watch(config.src + '/**/*.png');
 
-  this.registerWatcher('sprite', config.src + '/**/*.png');
-  return this.queueTask('sprite');
 });
