@@ -30,7 +30,7 @@ If you run `mix.spritesmith()` without parameters, it looks for all PNG-Files in
 
 The output of the `sprite.css` file is in `resources/assets/css`. The output of your `sprite.png` is in `public/assets/img`. 
 
-These are the default paths, they can be overwritten by `elixir.config.assetsDir` and `elixir.config.cssOutput` or by pass options.
+These are the default paths, they can be overwritten by `elixir.config.assetsPath` and `elixir.config.css.outputFolder` or by pass options. See the [config](https://github.com/laravel/elixir/blob/master/Config.js) file from elixir for more options.
 
 ## Options
 
