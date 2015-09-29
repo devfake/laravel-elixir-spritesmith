@@ -9,10 +9,10 @@ elixir.extend('spritesmith', function(src, options) {
 
   var options = options || {};
   var spritesmithOptions = options;
-  var elixirConfig = this;
+  var elixirConfig = this.config;
 
   var config = {
-    src: src || elixirConfig.assetsPath + 'img/sprites',
+    src: src || elixirConfig.assetsPath + '/img/sprites',
     imgOutput: options.imgOutput || 'public/assets/img',
     cssOutput: options.cssOutput || elixirConfig.css.outputFolder,
 
