@@ -7,7 +7,7 @@ This is a simple [Spritesmith](https://github.com/twolfson/gulp.spritesmith) wra
 Install this package over npm.
 
 ```sh
-$ npm install laravel-elixir-spritesmith --save-dev
+npm install laravel-elixir-spritesmith --save-dev
 ```
 
 Require it in your `gulpfile.js` and use it.
