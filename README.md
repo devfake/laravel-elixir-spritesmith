@@ -57,8 +57,8 @@ By default, you can use your sprite images with the class `sprite-{itemname}`. C
 
 ```javascript
 mix.spritesmith(null, {
-  cssClass: function(item) { 
-    return '.MY-SPRITE-' + item.name;
+  cssVarMap: function (sprite) {
+    sprite.name = 'MY-SPRITE-' + sprite.name;
   }
 }
 ```
