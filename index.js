@@ -7,14 +7,14 @@ var Task = elixir.Task;
 
 elixir.extend('spritesmith', function(src, options) {
 
-  var options = options || {};
+  options = options || {};
   var spritesmithOptions = options;
   var elixirConfig = this.config;
 
   var config = {
     src: src || elixirConfig.assetsPath + '/img/sprites',
     imgOutput: options.imgOutput || 'public/assets/img',
-    cssOutput: options.cssOutput || elixirConfig.css.outputFolder,
+    cssOutput: options.cssOutput || elixirConfig.css.outputFolder == 'css' ? 'resources/assets/css' : elixirConfig.css.outputFolder,
 
     cssFormat: options.cssFormat,
     imgName: options.imgName || 'sprite.png',
